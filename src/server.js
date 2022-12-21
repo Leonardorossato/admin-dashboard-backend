@@ -16,7 +16,7 @@ server.use(morgan("common"));
 server.use(
   cors({
     origin: "http://localhost:7000/api",
-    methods: "CREATE, UPDATE, READ, DELETED",
+    methods: "CREATE, UPDATE, READ, DELETE",
   })
 );
 server.use("/assets", express.static(path.join(__dirname, "public/assets")));
