@@ -4,6 +4,10 @@ const cors = require("cors");
 const helment = require("helmet");
 const morgan = require("morgan");
 const mongooseConnection = require("./connection/mongo.connection");
+const clientRoutes = require("./routes/client.routes");
+const generalRoutes = require("./routes/general.routes");
+const managementRoutes = require("./routes/management.routes");
+const salesRoutes = require("./routes/sales.routes");
 require("dotenv").config();
 const PORT = process.env.PORT;
 
