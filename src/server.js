@@ -1,7 +1,6 @@
 const express = require("express");
 const server = express();
 const cors = require("cors");
-const path = require("path");
 const helment = require("helmet");
 const morgan = require("morgan");
 const mongooseConnection = require("./connection/mongo.connection");
@@ -19,10 +18,12 @@ server.use(
     methods: "CREATE, UPDATE, READ, DELETE",
   })
 );
-server.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 /*Server Routes*/
-
+app.use('/api/client', clientRoutes)
+app.use('/api/general', generalRoutes)
+app.use('/api/management', managementRoutes)
+app.use('/api/sales', salesRoutes)
 
 /*Mongo configuration*/
 server.mongooseConnection = mongooseConnection;
