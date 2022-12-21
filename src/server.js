@@ -20,10 +20,10 @@ server.use(
 );
 
 /*Server Routes*/
-app.use('/api/client', clientRoutes)
-app.use('/api/general', generalRoutes)
-app.use('/api/management', managementRoutes)
-app.use('/api/sales', salesRoutes)
+app.use("/api/client", clientRoutes);
+app.use("/api/general", generalRoutes);
+app.use("/api/management", managementRoutes);
+app.use("/api/sales", salesRoutes);
 
 /*Mongo configuration*/
 server.mongooseConnection = mongooseConnection;
